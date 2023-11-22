@@ -1,0 +1,40 @@
+import java.util.Scanner;
+  import java.util.Random;
+    public class Exercicio2 {
+       public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+         Random rand = new Random();
+         int[][] matrizB = new int[3][3];
+         for (int i = 0; i < 3; i++) {
+         for (int j = 0; j < 3; j++) {
+         matrizB[i][j] = rand.nextInt(100);
+         }
+           }
+           System.out.println("Matriz B:");
+         for (int i = 0; i < 3; i++) {
+         for (int j = 0; j < 3; j++) {
+         System.out.print(matrizB[i][j] + " ");
+         }
+         System.out.println();
+         }
+         int menorValor = matrizB[0][0];
+         int maiorValor = matrizB[0][0];
+         int linhaMenor = 0, colunaMenor = 0, linhaMaior = 0, colunaMaior = 0;
+         for (int i = 0; i < 3; i++) {
+           for (int j = 0; j < 3; j++) {
+         if (matrizB[i][j] < menorValor) {
+           menorValor = matrizB[i][j];
+           linhaMenor = i;
+           colunaMenor = j;
+         }
+         if (matrizB[i][j] > maiorValor) {
+           maiorValor = matrizB[i][j];
+           linhaMaior = i;
+           colunaMaior = j;
+         }
+       }
+     }
+     System.out.println("Menor valor: " + menorValor + " na posição [" + linhaMenor+ "][" + colunaMenor + "]");
+     System.out.println("Maior valor: " + maiorValor + " na posição [" + linhaMaior+ "][" + colunaMaior + "]");
+   }
+}
