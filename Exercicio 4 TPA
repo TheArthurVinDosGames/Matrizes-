@@ -1,0 +1,17 @@
+import java.util.Random;
+public class Exercicio4 {
+ public static void main(String[] args) {
+ int[][] cartelaBingo = gerarCartela();
+ exibirCartela(cartelaBingo);
+ 
+ for (int i = 1; i <= 16; i++) {
+ System.out.println("Número chamado: " + i);
+ if (verificarBingo(cartelaBingo, i)) {
+ System.out.println("BINGO! O jogador acertou todas as dezenas.");
+ System.out.println("Rodada: " + i);
+ break;
+ }
+ }
+ }
+
+eu não soube fazer o resto :\
