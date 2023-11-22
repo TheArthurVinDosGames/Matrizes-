@@ -1,0 +1,22 @@
+import java.util.Scanner;
+  public class Exercicio3 {
+     public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       int[][] matrizC = new int[3][4];
+       for (int i = 0; i < 3; i++) {
+         int somaLinha = 0;
+         for (int j = 0; j < 3; j++) {
+           matrizC[i][j] = scanner.nextInt();
+         somaLinha += matrizC[i][j];
+         }
+   matrizC[i][3] = somaLinha;
+       }
+     System.out.println("Matriz C com a soma das linhas na última coluna:");
+     for (int i = 0; i < 3; i++) {
+       for (int j = 0; j < 4; j++) {
+   System.out.print(matrizC[i][j] + " ");
+       }
+   System.out.println();
+     }
+   }
+}
